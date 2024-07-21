@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="UTF-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<title>Div center </title>
+<style>
+    html,body{
+        width:100%;
+        height:100%;
+        margin:0;
+        padding:0;
+     /*   display: flex;
+        justify-content:center;
+        align-items:center; */
+       /* align-items:center;
+        place-content: center; */ /* place content center from left and right side */
+        display:grid;
+   
+   
+    }
+
+
+
+    #overview{
+        width:300px;
+        height:300px;
+        background-color:red;
+       /* display: flex;
+        justify-content:center;*/
+      /*  position:relative;*/
+      align-self:center;
+      justify-self:center;
+        
+    }
+    #overview-inner{
+        width:150px;
+        height:150px;
+        background-color:black;
+       /* align-self:center;*/
+       position: absolute;
+       top:50%;
+       left:50%;
+      /* bottom:0;
+       right:0;
+       margin:auto; */
+       transform:translate(-50%, -50%);/*(x,y)*/
+       
+    }
+</style>
+</head>
+<body>
+<div id="overview">
+    <div id="overview-inner">
+<!--1st way to make div center is d-flex in that i have to give properties to parent element-->
+<!--properties are use in 1st way to make div center
+display: flex;
+        justify-content:center;
+        align-items:center; this properties i have to give properties to parent element
+-->
+        <!--2nd way 
+        
+        in parent element i have to give two properties 
+        display: flex;
+        justify-content: center;
+        and to child element i have to give
+        align-self: center; 
+        
+        -->
+<!--3 to parent element i have to give only 1 property
+position: relative;
+and to child element i have to give
+position: absolute;
+top:0;
+left:0;
+bottom:0;
+right:0;
+margin:auto;
+    -->
+
+<!--4th way 
+parent:
+postion:relative;
+child:
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%); (x,y)
+
+-->
+<!-- 5th way 
+ we have to use grid system to center div
+ only to parent div we have to giv 2 properties 
+ display: grid;
+ place-content: center; 
+
+-->
+ <!--
+6th way
+to parent element we have to
+display: grid;
+align-items: center;
+ place-content: center; 
+ when i comment the place-content:center property is center from top and bottom but not from left and right side
+-->
+<!--7th way 
+parent:
+display: grid;
+child:
+align-self:center;
+justify-self:center;
+
+-->
+
+<!--flex-box
+
+
+-->
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
